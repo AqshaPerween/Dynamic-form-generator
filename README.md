@@ -1,70 +1,109 @@
-# Getting Started with Create React App
+# Dynamic Form Generator
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Table of Contents
+- [Project Overview](#project-overview)
+- [Features](#features)
+- [Setup Instructions](#setup-instructions)
+- [Example JSON Schemas](#example-json-schemas)
+  - [Basic Form Schema](#basic-form-schema)
+- [Local Development Guide](#local-development-guide)
+- [Testing](#testing)
+  - [Running Tests](#running-tests)
+- [Deployment Guide](#deployment-guide)
+  - [Deploy to Vercel](#deploy-to-vercel)
+- [Deployed Application](#deployed-application)
+- [Additional Features](#additional-features)
 
-## Available Scripts
+## Project Overview
+The Dynamic Form Generator is a React-based application that allows users to create forms dynamically based on a JSON schema. This project features a split-screen interface with a JSON editor and a real-time preview of the generated form. It supports form validation, responsive design, dark mode, and the ability to download form submissions as JSON.
 
-In the project directory, you can run:
+## Features
+- **Split-Screen Interface**: JSON editor and form preview side by side
+- **Real-Time Updates**: Form preview updates as JSON schema is edited
+- **Error Handling**: Real-time validation with error messages for invalid JSON
+- **Responsive Design**: Mobile-friendly layout with a stacked view
+- **Dark Mode Support**
+- **Form Field Validation**: Display validation errors and success states
+- **Copy Form JSON**: Button to copy the JSON schema
+- **Download Submissions**: Option to download form submissions as a JSON file
+- **Styled with Bootstrap**
 
-### `npm start`
+## Setup Instructions
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/AqshaPerween/dynamic-form-generator.git
+   cd dynamic-form-generator
+   ```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+2. **Install Dependencies**
+   ```bash
+   npm install
+   ```
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+3. **Run the Development Server**
+   ```bash
+   npm start
+   ```
 
-### `npm test`
+   Open [http://localhost:3000](http://localhost:3000) in your browser to view the application.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Example JSON Schemas
+### Basic Form Schema
+```json
+{
+  "title": "User Registration",
+  "fields": [
+    {
+      "label": "First Name",
+      "type": "text",
+      "name": "firstName",
+      "required": true
+    },
+    {
+      "label": "Email",
+      "type": "email",
+      "name": "email",
+      "required": true
+    },
+    {
+      "label": "Password",
+      "type": "password",
+      "name": "password",
+      "required": true,
+      "minLength": 6
+    }
+  ]
+}
+```
+## Local Development Guide
+- **JSON Editor**: Edit JSON schema with real-time syntax highlighting and validation.
+- **Form Preview**: Changes in the JSON editor are instantly reflected in the form preview.
+- **Dark Mode Toggle**: Activate dark mode from the UI.
+- **Validation Messages**: Ensure your JSON schema is valid; errors are displayed in real-time.
 
-### `npm run build`
+## Testing
+- **Playwright**: For end-to-end testing.
+- **Jest**: For unit tests.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Running Tests
+```bash
+npm test
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Deployment Guide
+### Deploy to Vercel
+1. Sign in to [Vercel](https://vercel.com/).
+2. Link your GitHub repository.
+3. Deploy the project directly from the main branch.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Deployed Application
+[Deployed Application Link](dynamic-form-generator-five.vercel.app)
 
-### `npm run eject`
+## Additional Features
+- **Copy JSON Button**: Copies the JSON schema to the clipboard.
+- **Download Submissions**: Form submissions can be downloaded as JSON files for record-keeping.
+- **Mobile Compatibility**: The UI is optimized for both desktop and mobile devices.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+---
+Feel free to reach out for any questions or issues!
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
